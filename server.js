@@ -198,4 +198,4 @@ wss.on("connection", ws => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => console.log(`Orbit Estate running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(Orbit Estate running on port ${PORT}));

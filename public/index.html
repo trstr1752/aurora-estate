@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오로라 에스테이트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div>
+      <h1>✦ 오로라 에스테이트</h1>
+      <p>4명이 함께 즐기는 오리지널 온라인 보드게임</p>
+    </div>
+    <div id="roomBadge" class="badge hidden"></div>
+  </header>
+
+  <section id="lobby" class="panel">
+    <h2>게임방 만들기 / 참가</h2>
+    <div class="form">
+      <label>닉네임 <input id="name" maxlength="12" placeholder="예: 별빛"></label>
+      <label>방 코드 <input id="room" maxlength="8" placeholder="예: AURORA"></label>
+      <button id="join">방 입장</button>
+    </div>
+    <p class="hint">친구들에게 같은 방 코드를 알려주세요. 2~4명이 접속하면 시작할 수 있습니다.</p>
+    <div id="error"></div>
+  </section>
+
+  <main id="game" class="hidden">
+    <section class="topbar panel">
+      <div id="status"></div>
+      <div class="actions">
+        <button id="start">게임 시작</button>
+        <button id="roll" class="primary" disabled>🎲 주사위 굴리기</button>
+        <button id="buy" disabled>🏠 토지 구매</button>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div id="board" class="board"></div>
+      <aside>
+        <div class="panel">
+          <h3>플레이어</h3>
+          <div id="players"></div>
+        </div>
+        <div class="panel">
+          <h3>게임 로그</h3>
+          <div id="log" class="log"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
